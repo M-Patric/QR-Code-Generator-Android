@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:background="#F7F8FA"
+    android:background="@color/background"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -21,18 +21,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/title_qr_generator"
-            android:textColor="#111827"
+            android:textColor="@color/text_primary"
             android:textSize="30sp"
             android:textStyle="bold"
             android:gravity="center"
-            android:layout_marginTop="12dp" />
+            android:layout_marginTop="16dp" />
 
         <TextView
             android:id="@+id/subtitleText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/subtitle_qr_generator"
-            android:textColor="#6B7280"
+            android:textColor="@color/text_secondary"
             android:textSize="16sp"
             android:gravity="center"
             android:layout_marginTop="8dp"
@@ -45,7 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/input_label"
-            android:textColor="#374151"
+            android:textColor="@color/text_primary"
             android:textSize="15sp"
             android:textStyle="bold"
             android:layout_marginBottom="8dp" />
@@ -60,18 +60,14 @@
             android:inputType="textUri|textMultiLine"
             android:autofillHints="text"
             android:minHeight="56dp"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:paddingTop="12dp"
-            android:paddingBottom="12dp"
-            android:background="#FFFFFF"
-            android:textColor="#111827"
-            android:textColorHint="#9CA3AF"
+            android:background="@drawable/edit_text_background"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
             android:textSize="16sp"
             android:gravity="top|start"
             android:layout_marginBottom="16dp" />
 
-        <!-- Generate -->
+        <!-- Generate button -->
 
         <Button
             android:id="@+id/generateButton"
@@ -80,24 +76,49 @@
             android:text="@string/generate_qr_code"
             android:textSize="15sp"
             android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textColor="@color/button_text_colors"
+            android:background="@drawable/button_background"
             android:minHeight="52dp"
             android:layout_marginBottom="24dp" />
 
-        <!-- QR code -->
+        <!-- QR code / empty state -->
 
-        <ImageView
-            android:id="@+id/qrImageView"
-            android:layout_width="280dp"
-            android:layout_height="280dp"
+        <FrameLayout
+            android:id="@+id/qrContainer"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
             android:layout_gravity="center_horizontal"
-            android:contentDescription="@string/qr_code_description"
-            android:scaleType="fitCenter"
-            android:background="#FFFFFF"
-            android:padding="12dp"
-            android:visibility="gone"
-            android:layout_marginBottom="24dp" />
+            android:layout_marginBottom="24dp">
 
-        <!-- Save / Share -->
+            <!-- Visible before a QR code is generated -->
+
+            <TextView
+                android:id="@+id/emptyQrText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/qr_background"
+                android:gravity="center"
+                android:text="@string/empty_qr_message"
+                android:textColor="@color/text_secondary"
+                android:textSize="15sp"
+                android:padding="24dp" />
+
+            <!-- Generated QR code -->
+
+            <ImageView
+                android:id="@+id/qrImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/qr_background"
+                android:contentDescription="@string/qr_code_description"
+                android:scaleType="fitCenter"
+                android:padding="12dp"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <!-- Save / Share buttons -->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -112,6 +133,9 @@
                 android:layout_weight="1"
                 android:text="@string/save"
                 android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="@color/button_text_colors"
+                android:background="@drawable/button_background"
                 android:minHeight="52dp"
                 android:enabled="false" />
 
@@ -126,6 +150,9 @@
                 android:layout_weight="1"
                 android:text="@string/share"
                 android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="@color/button_text_colors"
+                android:background="@drawable/button_background"
                 android:minHeight="52dp"
                 android:enabled="false" />
 

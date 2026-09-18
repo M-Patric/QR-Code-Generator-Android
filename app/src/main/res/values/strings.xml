@@ -55,4 +55,8 @@
         No application is available to share this QR code
     </string>
 
+    <string name="empty_qr_message">
+    Your QR code will appear here
+    </string>
+
 </resources>

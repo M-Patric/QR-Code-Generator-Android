@@ -16,6 +16,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.MultiFormatWriter
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
@@ -39,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         val inputEditText = findViewById<EditText>(R.id.inputEditText)
         val generateButton = findViewById<Button>(R.id.generateButton)
         val qrImageView = findViewById<ImageView>(R.id.qrImageView)
+        val emptyQrText = findViewById<TextView>(R.id.emptyQrText)
         val saveButton = findViewById<Button>(R.id.saveButton)
         val shareButton = findViewById<Button>(R.id.shareButton)
 
@@ -98,7 +100,9 @@ class MainActivity : AppCompatActivity() {
 
                 // Display the QR code.
                 qrImageView.setImageBitmap(bitmap)
+
                 qrImageView.visibility = ImageView.VISIBLE
+                emptyQrText.visibility = TextView.GONE
 
                 // The user can now save it.
                 saveButton.isEnabled = true
@@ -114,9 +118,9 @@ class MainActivity : AppCompatActivity() {
 
             } catch (e: Exception) {
 
-                // Prevent an unexpected QR-generation failure
-                // from crashing the application.
                 qrImageView.visibility = ImageView.GONE
+                emptyQrText.visibility = TextView.VISIBLE
+
                 saveButton.isEnabled = false
                 shareButton.isEnabled = false
 
