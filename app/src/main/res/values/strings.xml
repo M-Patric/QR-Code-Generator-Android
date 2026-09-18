@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">QR Code Generator</string>
+
+    <string name="title_qr_generator">QR Code Generator</string>
+
+    <string name="subtitle_qr_generator">
+        Create QR codes from text or URLs
+    </string>
+
+    <string name="input_label">Text or URL</string>
+
+    <string name="input_hint">Enter text or URL here</string>
+
+    <string name="generate_qr_code">Generate QR Code</string>
+
+    <string name="save">Save</string>
+
+    <string name="share">Share</string>
+
+    <string name="qr_code_description">Generated QR code</string>
+
+    <string name="empty_input_error">
+        Please enter some text or a URL
+    </string>
+
+    <string name="qr_generation_error">
+        Unable to generate the QR code
+    </string>
+
+    <string name="qr_generated">
+        QR code generated successfully
+    </string>
+
+    <string name="qr_saved">
+        QR code saved successfully
+    </string>
+
+    <string name="save_failed">
+        Failed to save QR code
+    </string>
+
+    <string name="generate_first">
+        Generate a QR code first
+    </string>
+
+    <string name="save_before_share">
+        Save the QR code before sharing
+    </string>
+
+    <string name="share_qr_code">Share QR Code</string>
+
+    <string name="share_failed">
+        No application is available to share this QR code
+    </string>
+
+</resources>

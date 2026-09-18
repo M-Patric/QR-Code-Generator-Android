@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F7F8FA"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header -->
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_qr_generator"
+            android:textColor="#111827"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/subtitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/subtitle_qr_generator"
+            android:textColor="#6B7280"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="28dp" />
+
+        <!-- Input label -->
+
+        <TextView
+            android:id="@+id/inputLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/input_label"
+            android:textColor="#374151"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Text / URL input -->
+
+        <EditText
+            android:id="@+id/inputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/input_hint"
+            android:inputType="textUri|textMultiLine"
+            android:autofillHints="text"
+            android:minHeight="56dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:background="#FFFFFF"
+            android:textColor="#111827"
+            android:textColorHint="#9CA3AF"
+            android:textSize="16sp"
+            android:gravity="top|start"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Generate -->
+
+        <Button
+            android:id="@+id/generateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/generate_qr_code"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:minHeight="52dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- QR code -->
+
+        <ImageView
+            android:id="@+id/qrImageView"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/qr_code_description"
+            android:scaleType="fitCenter"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:visibility="gone"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Save / Share -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/save"
+                android:textStyle="bold"
+                android:minHeight="52dp"
+                android:enabled="false" />
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="1dp" />
+
+            <Button
+                android:id="@+id/shareButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/share"
+                android:textStyle="bold"
+                android:minHeight="52dp"
+                android:enabled="false" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
