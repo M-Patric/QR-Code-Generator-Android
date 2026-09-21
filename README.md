@@ -66,6 +66,24 @@ The application was tested for:
 - Share cancellation
 - QR scanning
 - Rapid QR generation
+
+## Screenshots
+
+### Home Screen
+
+![Home Screen](screenshots/01-home-screen.png)
+
+### QR Code Generated
+
+![QR Code Generated](screenshots/02-qr-generated.png)
+
+### QR Code Saved
+
+![QR Code Saved](screenshots/03-qr-saved.png)
+
+### QR Code Sharing
+
+![QR Code Sharing](screenshots/04-share-sheet.png)
 ## Author
 
 Patrick Morrison
