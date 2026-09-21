@@ -71,19 +71,19 @@ The application was tested for:
 
 ### Home Screen
 
-![Home Screen](screenshots/01-home-screen.png)
+![Home Screen](screenshots/01-home-screen.jpg)
 
 ### QR Code Generated
 
-![QR Code Generated](screenshots/02-qr-generated.png)
+![QR Code Generated](screenshots/02-qr-generated.jpg)
 
 ### QR Code Saved
 
-![QR Code Saved](screenshots/03-qr-saved.png)
+![QR Code Saved](screenshots/03-qr-saved.jpg)
 
 ### QR Code Sharing
 
-![QR Code Sharing](screenshots/04-share-sheet.png)
+![QR Code Sharing](screenshots/04-share-sheet.jpg)
 ## Author
 
 Patrick Morrison
